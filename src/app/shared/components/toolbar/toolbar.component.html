@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+    <a routerLink="/">Prueba</a>
+    <span class="fill-remaining-space"></span>
+    <a *ngIf="authSvc.userData|async; else showLogin" (click)="onLogout()">      
+      <button mat-button>LogOut</button>
+    </a>
+    <ng-template #showLogin>
+      <a routerLink="/login">      
+        <button mat-button>LogIn</button>
+      </a>
+      <a routerLink="/register">      
+        <button mat-button>Register</button>
+      </a>
+    </ng-template>      
+    <a routerLink="/admin" *ngIf="authSvc.userData|async">
+      <button mat-button>Admin</button>
+    </a>
+    <a routerLink="/about">
+      <button mat-button>About</button>
+    </a>
+  </mat-toolbar>

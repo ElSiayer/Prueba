@@ -1,0 +1,12 @@
+<div class="container">
+    <mat-card class="post-card" *ngFor="let pst of posts$ |async">
+        <mat-card-header style="justify-content: center;">
+            <mat-card-title><a [routerLink]="['/post',pst.id]">{{pst.titlePost}}</a></mat-card-title>
+            <mat-card-subtitle>Subtitle</mat-card-subtitle>
+        </mat-card-header>
+        <img matCardImage src={{pst.imgPost}}>
+        <mat-card-content>
+            <p>{{pst.contentPost}}</p>
+        </mat-card-content>
+    </mat-card>
+</div>

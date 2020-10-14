@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Ingresar</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="registerMail" (ngSubmit)="register(registerMail.value)">           
+            <p>
+                <mat-form-field>
+                    <input type="text" matInput placeholder="Username" formControlName="mail"/>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <input type="password" matInput placeholder="Password" formControlName="pass"/>
+                </mat-form-field>
+            </p>
+            <button style="width: 100%;" type="submit" mat-raised-button color="primary">Registrarse</button>
+        </form>
+    </mat-card-content>
+</mat-card>

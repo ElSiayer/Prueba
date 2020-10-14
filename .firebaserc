@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "pruebas-31407": {
+      "hosting": {
+        "Prueba": [
+          "pruebas-31407"
+        ]
+      }
+    }
+  }
+}
