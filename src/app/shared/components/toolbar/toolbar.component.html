@@ -15,6 +15,9 @@
     <a routerLink="/admin" *ngIf="authSvc.userData|async">
       <button mat-button>Admin</button>
     </a>
+    <a routerLink="/admin" *ngIf="authSvc.userData|async">
+      <button mat-button>{{usuario}}</button>
+    </a>
     <a routerLink="/about">
       <button mat-button>About</button>
     </a>

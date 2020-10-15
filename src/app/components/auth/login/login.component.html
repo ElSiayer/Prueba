@@ -14,7 +14,12 @@
                     <input type="password" matInput placeholder="Password" formControlName="pass"/>
                 </mat-form-field>
             </p>
-            <button style="width: 100%;" type="submit" mat-raised-button color="primary">Enviar</button>
+            <div class="form-group">
+                <button style="width: 100%;" type="submit" class="btn btn-primary btn-lg">Ingresar</button>
+            </div>
         </form>
+        <div class="form-group">
+            <button (click)="lgGoogle()" type="button" class="btn btn-dark btn-lg btn-google">Google</button>
+        </div>
     </mat-card-content>
 </mat-card>

@@ -19,10 +19,27 @@ export class LoginComponent implements OnInit {
   })
   ngOnInit(): void {
   }
+  async lgGoogle(){
+    try {
+      this.authSvc.loginGoogle().then(res=>{ 
+        console.log("Ingreso exitoso: ",res);
+        if(res){        
+          this.route.navigate(['/']);
+        };
+      });
+        
+    } catch (error) {
+      console.log(error);
+    } 
+  }
   onLogin(form : UserLog){    
     this.authSvc.loginEmail(form).then(res=>{ 
-      console.log("Ingreso exitoso: ",res)}).catch(erorx => console.log("Error: ",erorx));
-      this.route.navigate(['/']);
+      console.log("Ingreso exitoso: ",res);
+      if(res){        
+        this.route.navigate(['/']);
+      };
+    }).catch(erorx => console.log("Error: ",erorx));
+      
   }
 
 }

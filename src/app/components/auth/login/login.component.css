@@ -11,6 +11,9 @@
     width: 100%;
     min-width: 40%;    
 }
-.button{
+.form button{
+    width: 100%;
+}
+.btn-google{
     width: 100%;
 }
